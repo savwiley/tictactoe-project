@@ -40,18 +40,18 @@ const tictactoe = (() => {
 
     //runs AI
     function aiRun() {
-        if (xMoves.length + oMoves.length == 9) {
-            alert("Tie!")
-        };
         const tile = document.querySelectorAll(".tile");
-        for (let i = 0; i <= tile.length; i++)
-            if (!tile[i].getAttribute("value")){
-                oMoves.push(tile[i].getAttribute("id"));
+        let rand;
+        for (let i = 0; i <= tile.length; i++){
+            rand = Math.floor(Math.random() * 9)
+            if (!tile[rand].getAttribute("value")){
+                oMoves.push(tile[rand].getAttribute("id"));
                 if (runGame(oMoves)) {
                     alert(`Computer/${player2} wins!`)
                 }
-                return tile[i].setAttribute("value", "O");
-            };
+                return tile[rand].setAttribute("value", "O");
+            }
+        };
     };
 
     //marks the squares
@@ -87,7 +87,11 @@ const tictactoe = (() => {
         let decideO;
         if (AI == 1) {
             xMoves.push(move);
-            decideX = runGame(xMoves);
+            if (runGame(xMoves)) {
+                alert(`${player1} wins!`)
+            } else if ((!runGame(xMoves) || !runGame(oMoves)) && xMoves.length + oMoves.length == 9) {
+                alert("Tie!")
+            };
             aiRun();
         } else if (player == "X") {
             xMoves.push(move);
@@ -100,7 +104,7 @@ const tictactoe = (() => {
             alert(`${player1} wins!`)
         } else if (decideO) {
             alert(`${player2} wins!`)
-        } else if (xMoves.length + oMoves.length == 9) {
+        } else if (xMoves.length + oMoves.length == 9 && AI == 0) {
             alert("Tie!")
         };
     };
