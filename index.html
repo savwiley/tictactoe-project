@@ -6,12 +6,15 @@
 
         <link href="style.css" rel="stylesheet">
 
-        <title>Tic-Tac-Toe</title>
+        <script src="https://kit.fontawesome.com/25a49a4783.js" crossorigin="anonymous"></script>
+
+        <title>Tic Tac Toe</title>
 
     </head>
     <body>
 
         <form class="playerData">
+            <span id="title">Tic Tac Toe</span><br />
             <label for="p1">You:</label>
             <input type="text" name="p1" id="p1" value="Player 1"><br />
             <label for="p2">Opponent:</label>
@@ -32,6 +35,8 @@
             <div style="grid-area:seven;"><input type="button" id="seven" class="tile" onclick="tictactoe.id(this.id)"></div>
             <div style="grid-area:eight;"><input type="button" id="eight" class="tile" onclick="tictactoe.id(this.id)"></div>
             <div style="grid-area:nine;"><input type="button" id="nine" class="tile" onclick="tictactoe.id(this.id)"></div>
+            <br />
+            <span id="credit" style="grid-area:cred;"><a href="https://github.com/savwiley/tictactoe-project">by savwiley <i class="fab fa-github"></i></a></span>
         </div></div>
 
 
