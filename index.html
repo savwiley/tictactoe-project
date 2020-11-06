@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet"> 
+
+        <link href="style.css" rel="stylesheet">
+
+        <title>Tic-Tac-Toe</title>
+
+    </head>
+    <body>
+
+        <form class="playerData">
+            <label for="p1">You:</label>
+            <input type="text" name="p1" id="p1" value="Player 1"><br />
+            <label for="p2">Opponent:</label>
+            <input type="text" name="p2" id="p2" value="Player 2"><br />
+            <input type="button" id="submit" value="Submit Names" onclick="tictactoe.playerData(p1.value, p2.value)">
+            <input type="button" id="newGame" value="New Game" onclick="tictactoe.newGame()"><br />
+            <input type="button" id="AI" value="Play AI" onclick="tictactoe.aiFunc()">
+        </form>
+
+        <div class="board">
+        <div id="board">
+            <div style="grid-area:one;"><input type="button" id="one" class="tile" onclick="tictactoe.id(this.id)"></div>
+            <div style="grid-area:two;"><input type="button" id="two" class="tile" onclick="tictactoe.id(this.id)"></div>
+            <div style="grid-area:three;"><input type="button" id="three" class="tile" onclick="tictactoe.id(this.id)"></div>
+            <div style="grid-area:four;"><input type="button" id="four" class="tile" onclick="tictactoe.id(this.id)"></div>
+            <div style="grid-area:five;"><input type="button" id="five" class="tile" onclick="tictactoe.id(this.id)"></div>
+            <div style="grid-area:six;"><input type="button" id="six" class="tile" onclick="tictactoe.id(this.id)"></div>
+            <div style="grid-area:seven;"><input type="button" id="seven" class="tile" onclick="tictactoe.id(this.id)"></div>
+            <div style="grid-area:eight;"><input type="button" id="eight" class="tile" onclick="tictactoe.id(this.id)"></div>
+            <div style="grid-area:nine;"><input type="button" id="nine" class="tile" onclick="tictactoe.id(this.id)"></div>
+        </div></div>
+
+
+        <script src="main.js" type="text/javascript"></script>
+    </body>
+</html>
