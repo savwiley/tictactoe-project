@@ -29,11 +29,11 @@ const tictactoe = (() => {
     //turns on/off AI
     const aiFunc = () => {
         const aiBtn = document.querySelector("#AI");
-        if (aiBtn.getAttribute("value") == "Play AI") {
-            aiBtn.setAttribute("value", "Stop AI");
+        if (aiBtn.getAttribute("value") == "Human vs Computer") {
+            aiBtn.setAttribute("value", "Human vs Human");
             AI++;
         } else {
-            aiBtn.setAttribute("value", "Play AI");
+            aiBtn.setAttribute("value", "Human vs Computer");
             AI--;
         }
     };
